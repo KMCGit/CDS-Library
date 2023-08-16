@@ -1,0 +1,11 @@
+{
+  "topic": "Topic",
+  "payers": ["cms"],
+  "mappings": [
+    {
+      "codeSystem": "hcpcs",
+      "codes": ["22222"]
+    }
+  ],
+  "fhirVersions": ["R4"]
+}

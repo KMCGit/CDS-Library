@@ -1,0 +1,17 @@
+{
+    "topic": "TestMonitor",
+    "payers": [
+        "cms"
+    ],
+    "mappings": [
+        {
+            "codeSystem": "cpt",
+            "codes": [
+                "00000", "S1031"
+            ]
+        }
+    ],
+    "fhirVersions": [
+        "R4"
+    ]
+}
