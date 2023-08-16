@@ -21,7 +21,7 @@ define DOCUMENTATION_REQUIRED:
   true
 
 define APPROVE_PRIORAUTH:
-  "Code" = 'G0179' and ("PractitionerID" = 'Practitioner/pra1255' or "PractitionerID" = 'Practitioner/162902') or "Code" = 'G0180' and ("PractitionerID" = 'Practitioner/pra1255' or "PractitionerID" = 'Practitioner/162902') or "Code" = 'G0155' and ("PractitionerID" = 'Practitioner/pra1255' or "PractitionerID" = 'Practitioner/162902')
+  "Code" = 'G0179' and "PractitionerID" = 'Practitioner/162902' or "Code" = 'G0180' and "PractitionerID" = 'Practitioner/162902' or "Code" = 'G0155' and "PractitionerID" = 'Practitioner/162902'
 
 define RESULT_InfoLink:
   'https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/Medicare-Home-Health-Benefit-Text-Only.pdf'
