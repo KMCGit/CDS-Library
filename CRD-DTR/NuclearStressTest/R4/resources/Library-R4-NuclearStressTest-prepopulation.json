@@ -1,0 +1,218 @@
+{
+	"resourceType": "Library",
+	"id": "NuclearStressTest-prepopulation",
+	"url": "http://hl7.org/fhir/us/davinci-dtr/Library/NuclearStressTest-prepopulation",
+	"version": "1",
+	"name": "NuclearStressTest-prepopulation",
+	"status": "draft",
+	"experimental": true,
+	"type": {
+		"coding": [
+			{
+				"code": "logic-library"
+			}
+		]
+	},
+	"relatedArtifact": [
+		{
+		  "type": "depends-on",
+		  "resource": "Library/FHIRHelpers-4.0.0"
+		},
+		{
+		  "type": "depends-on",
+		  "resource": "Library/CDS_Connect_Commons_for_FHIRv400"
+		},
+		{
+		  "type": "depends-on",
+		  "resource": "Library/DTRHelpers"
+		}
+	  ],
+	"dataRequirement": [
+		{
+			"type": "Practitioner"
+		},
+		{
+			"type": "Procedure"
+		},
+		{
+			"type": "Observation" 
+		},
+		{
+			"type": "Condition"
+		},
+		{
+			"type": "MedicationDispense"
+		},
+		{
+			"type": "MedicationRequest"
+		},
+		{
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-34421"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-34911"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-38469"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-36674"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-36620"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-38465"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-36609"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-38468"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-38182"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-38466"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-32838"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-33104"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-36737"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-34850"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-38467"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-36496"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-33281"
+			  }
+			]
+		  },
+		  {
+			"type": "ObservationValueSet",
+			"codeFilter": [
+			  {
+				"path": "code",
+				"valueSet": "com:motivemi:valueset:mmi-36522"
+			  }
+			]
+		  }
+	],
+	"content": [
+		{
+		  "contentType": "application/elm+json",
+		  "url": "files/NuclearStressTest/r4/NuclearStressTestPrepopulation-0.1.0.cql"
+		}
+	  ]
+}

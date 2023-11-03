@@ -1,0 +1,549 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "NuclearStressTest",
+    "name": "NuclearStressTest",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-10-24T21:49:29.998+00:00",
+        "source": "#MT1Zbchou9jGx99d",
+        "profile": [
+            "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-r4"
+        ]
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This form is used to collect information from the provider on Home Oxygen Therapy.</p></div>"
+    },
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+            "valueCanonical": "http://hl7.org/fhir/us/davinci-dtr/Library/NuclearStressTest-prepopulation"
+          },
+        {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext",
+            "extension": [
+                {
+                    "url": "name",
+                    "valueCoding": {
+                        "system": "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext",
+                        "code": "patient",
+                        "display": "Patient"
+                    }
+                },
+                {
+                    "url": "type",
+                    "valueCode": "Patient"
+                },
+                {
+                    "url": "description",
+                    "valueString": "The patient that is to be used to pre-populate the form"
+                }
+            ]
+        },
+        {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint",
+            "valueUri": "http://example.org/QuestionnaireResponse/create"
+        },
+        {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-entryMode",
+            "valueCode": "sequential"
+        }
+    ],
+    "url": "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/nst-questionnaire",
+    "version": "1.0.0",
+    "title": "Nuclear Stress Test Order Template",
+    "status": "draft",
+    "subjectType": [
+        "Patient"
+    ],
+    "date": "2023-10-13T00:00:00+00:00",
+    "publisher": "Motive Medical Intelligence",
+    "item": [
+        {
+            "linkId": "1",
+            "text": "Patient Information",
+            "type": "group",
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberLastName"
+                            }
+                        }
+                    ],
+                    "linkId": "1.1",
+                    "text": "Last Name",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberMiddleInitial"
+                            }
+                        }
+                    ],
+                    "linkId": "1.2",
+                    "text": "Middle Initial",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberFirstName"
+                            }
+                        }
+                    ],
+                    "linkId": "1.3",
+                    "text": "First Name",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberBirthDate"
+                            }
+                        }
+                    ],
+                    "linkId": "1.4",
+                    "text": "Date Of Birth",
+                    "type": "date",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberGender"
+                            }
+                        }
+                    ],
+                    "linkId": "1.5",
+                    "text": "Gender",
+                    "type": "choice",
+                    "required": true,
+                    "answerValueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberAgeInYears"
+                            }
+                        }
+                    ],
+                    "linkId": "1.6",
+                    "text": "Age",
+                    "type": "integer",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberAddress"
+                            }
+                        }
+                    ],
+                    "linkId": "1.7",
+                    "text": "Address",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "linkId": "2",
+            "text": "Provider who is performing face-to-face evaluation",
+            "type": "group",
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberPractitionerID"
+                            }
+                        }
+                    ],
+                    "linkId": "2.1",
+                    "text": "Practitioner ID",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".practitionerLastName"
+                            }
+                        }
+                    ],
+                    "linkId": "2.2",
+                    "text": "Last Name",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberFirstName"
+                            }
+                        }
+                    ],
+                    "linkId": "2.3",
+                    "text": "First Name",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".practitionerPrefix"
+                            }
+                        }
+                    ],
+                    "linkId": "2.3",
+                    "text": "Practitioner Prefix",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".dateOfFaceToFaceVisit"
+                            }
+                        }
+                    ],
+                    "linkId": "2.4",
+                    "text": "Date of Face-To-Face Evaluation",
+                    "type": "date",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "linkId": "3",
+            "text": "ASCVD Score Calculation",
+            "type": "group",
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberSmokingStatusCode"
+                            }
+                        }
+                    ],
+                    "linkId": "3.1",
+                    "text": "Observation smoking status",
+                    "type": "string",
+                    "required": true                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberSmokingStatusDate"
+                            }
+                        }
+                    ],
+                    "linkId": "3.2",
+                    "text": "Observation date and smoking status",
+                    "type": "date",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberIsDiabetic"
+                            }
+                        }
+                    ],
+                    "linkId": "3.3",
+                    "text": "Is the member diabetic?",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberHasHypertension"
+                            }
+                        }
+                    ],
+                    "linkId": "3.4",
+                    "text": "Has member been diagnosed as having high blood pressure?",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberMedicationList"
+                            }
+                        }
+                    ],
+                    "linkId": "3.5",
+                    "text": "Members Medication Status",
+                    "type": "text"
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".membersAntihypertensiveMedication"
+                            }
+                        }
+                    ],
+                    "linkId": "3.6",
+                    "text": "Members Antihypertention Medication",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberSystolicBloodPressure"
+                            }
+                        }
+                    ],
+                    "linkId": "3.7",
+                    "text": "Members Systolic Blood Pressure",
+                    "type": "decimal",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberDiastolicBloodPressure"
+                            }
+                        }
+                    ],
+                    "linkId": "3.8",
+                    "text": "Members Diastolic Blood Pressure",
+                    "type": "decimal",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberTotalCholesterol"
+                            }
+                        }
+                    ],
+                    "linkId": "3.9",
+                    "text": "Members Total Cholesterol",
+                    "type": "decimal",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberLDLCholesterol"
+                            }
+                        }
+                    ],
+                    "linkId": "3.10",
+                    "text": "Members LDL Cholesterol",
+                    "type": "decimal",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberHDLCholesterol"
+                            }
+                        }
+                    ],
+                    "linkId": "3.11",
+                    "text": "Member HDL Cholesterol",
+                    "type": "decimal",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "linkId": "4",
+            "text": "Nuclear Stress Test Contraindications",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "4.1",
+                    "text": "48 Hour Look-Up Timeframe",
+                    "type": "group",
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                                    "valueExpression": {
+                                        "language": "text/cql-identifier",
+                                        "expression": "\"NuclearStressTestPrepopulation\".48HrLookUpTimeframeStart"
+                                    }
+                                }
+                            ],
+                            "linkId": "4.1.1",
+                            "text": "Start Date",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                                    "valueExpression": {
+                                        "language": "text/cql-identifier",
+                                        "expression": "\"NuclearStressTestPrepopulation\".48HrLookUpTimeframeEnd"
+                                    }
+                                }
+                            ],
+                            "linkId": "4.1.2",
+                            "text": "End Date",
+                            "type": "date",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberAsthmaInfo"
+                            }
+                        }
+                    ],
+                    "linkId": "4.2",
+                    "text": "Member Asthma Info",
+                    "type": "choice",
+                    "required": true,
+                    "answerValueSet": "com:motivemi:valueset:mmi-36522"
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberCOPDInfo"
+                            }
+                        }
+                    ],
+                    "linkId": "4.3",
+                    "text": "Member COPD Info",
+                    "type": "choice",
+                    "required": true,
+                    "answerValueSet": "com:motivemi:valueset:mmi-36496"
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberHadAcuteCoronarySyndromeInLast48Hours"
+                            }
+                        }
+                    ],
+                    "linkId": "4.4",
+                    "text": "Did the member have an ACS event in the past 48 hours?",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberHadVentricularTachycardiaInLast48Hours"
+                            }
+                        }
+                    ],
+                    "linkId": "4.5",
+                    "text": "Did the member have ventricular tachycardia in the past 48 hours?",
+                    "type": "boolean",
+                    "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                            "valueExpression": {
+                                "language": "text/cql-identifier",
+                                "expression": "\"NuclearStressTestPrepopulation\".memberHadSecondOrThirdDegreeHeartBlock"
+                            }
+                        }
+                    ],
+                    "linkId": "4.6",
+                    "text": "Has the member had a 2nd and 3rd degree AV block?",
+                    "type": "boolean",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
